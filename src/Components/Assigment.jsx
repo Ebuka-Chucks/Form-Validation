@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/assigment.css";
-import {AiOutlineEye} from "react-icons/ai"
-import {AiOutlineEyeInvisible} from "react-icons/ai"
+import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
 
 const Assigment = () => {
   const [person, setPerson] = useState({
@@ -21,13 +21,12 @@ const Assigment = () => {
 
     const validationErrors = {};
 
-    if (person.username.length < 5 ) {
+    if (person.username.length < 5) {
       validationErrors.username =
         "Username must be at least 5 characters long.";
     }
-    if (person.username= "") {
-      validationErrors.username =
-        "Username cannot be Empty"
+    if ((person.username = "")) {
+      validationErrors.username = "Username cannot be Empty";
     }
     if (!person.email.includes("@")) {
       validationErrors.email =
@@ -38,7 +37,7 @@ const Assigment = () => {
         "Password must be more than 7 characters long.";
     }
     if (person.password2 !== person.password) {
-      validationErrors.confirmPassword = "Passwords do not match.";
+      validationErrors.password2 = "Passwords do not match.";
     }
     setPerson({
       username: "",
@@ -46,17 +45,23 @@ const Assigment = () => {
       password: "",
       password2: "",
     });
-    setTimeout(() => {
-      setErrors({})
-    },5000 )
     setErrors(validationErrors);
+    setTimeout(() => {
+      setErrors({});
+    }, 5000);
     // console.log(errors);
   };
   const [show, setShow] = useState(true);
   const toggleShow = (e) => {
-    e.preventDefault()
-    setShow(!show)
-  }
+    e.preventDefault();
+    setShow(!show);
+  };
+  const [show2, setShow2] = useState(true);
+  const toggleShow2 = (e) => {
+    e.preventDefault();
+    console.log("here");
+    setShow2(!show2);
+  };
   return (
     <div className="container">
       <form onChange={handleChange}>
@@ -108,12 +113,16 @@ const Assigment = () => {
           </div>
           <div className="child4">
             <input
-              type="password"
+              type={show2 ? "password" : "text"}
               name="password2"
               placeholder="Confirm Password"
               value={person.password2 || ""}
               onChange={handleSubmit}
             />
+            <button onClick={toggleShow2}>
+              {" "}
+              {show2 ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+            </button>
             <p>{errors.password2}</p>
           </div>
         </div>
