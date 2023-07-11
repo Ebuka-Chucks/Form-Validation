@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} .container { 
+  margin: 20px 25%;
+ width: 50%;
+  height: 1000px;
+   border-color: rgb(250, 136, 6); 
+  text-align: center;
+background-color: white; 
+  border-radius:  20px;
+  padding-top: 10px;
+}
+.container h1 {
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #bbff00;
+  font-style: oblique;
+}
+.two {
+  margin-top: 30px;
+  align-items: center;
+}
+.child1 input {
+  width: 70%;
+  height: 80px;
+  border: 1px light;
+  border-radius: 10px;
+  border-style: dashed;
+  outline-color: #fbff1d;
+  padding-left: 50px;
+  margin-bottom: -40px;
+}
+.child1 label{
+    margin-bottom: 20px;
+}
+.child2 input {
+  width: 70%;
+  height: 80px;
+  border: 1px light;
+  border-radius: 10px;
+  margin: 5px auto;
+  border-style: dashed;
+  outline-color: #fbff1d;
+  padding-left: 50px;
+}
+.child2 label{
+    margin-top: 50px;
+      
+}
+
+.child3 input {
+  width: 70%;
+  height: 80px;
+  border: 1px light;
+  border-radius: 10px;
+  margin: 20px auto;
+  border-style: dashed;
+  outline-color: #fbff1d;
+  padding-left: 50px;
+}
+.child3 button{
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  margin-left: -50px;
+  padding-top: 10px;
+}
+.container p{
+  color: red;
+  font-size: 20px;
+}
+.child3 label{
+    margin-top: 20px;
+}
+.child4 input {
+  width: 70%;
+  height: 80px;
+  border: 1px light;
+  border-radius: 10px;
+  margin: 45px auto;
+  border-style: dashed;
+  outline-color: #fbff1d;
+  padding-left: 50px;
+}
+.child4 input::placeholder{
+    font-size: 25px;
+    color: #0216c7;
+    font-family: cursive;
+
+}
+.child3 input::placeholder {
+    font-size: 25px;
+    color: #0216c7;
+    font-family: cursive;
+}
+.child1 input::placeholder {
+    font-size: 25px;
+    color: #0216c7;
+}.child2 input::placeholder {
+    font-size: 25px;
+    color: #0216c7;
+font-family: cursive;
+
+}
+.two label {
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  display: flex;
+  margin-left: 15%;
+  font-weight: 600;
+}
+.register{
+    width: 300px;
+    height: 80px;
+    background-color: #bbff00;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: aliceblue;
+    border-radius: 10px;
+    border: none;
+}
+.register:hover{
+    cursor: pointer;
+    background-color: rgb(252, 235, 6);
+    color: #0c0c0c;
+    font-weight: bolder;
+}
+.child1 input:hover{
+    cursor: pointer;
+}
+.child2 input:hover{
+    cursor: pointer;
+}
+.child3 input:hover{
+    cursor: pointer;
+}
+.child4 input:hover{
+    cursor: pointer;
+}
+
